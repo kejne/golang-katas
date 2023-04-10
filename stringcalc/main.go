@@ -35,7 +35,7 @@ func getDelimiter(s string) string {
 	if len(s) < 4 {
 		return ","
 	}
-	if !strings.Contains(s, "//") && s[:2] == "//" {
+	if !strings.Contains(s, "//") && s[:2] != "//" {
 		return ","
 	}
 	return string(s[2])
